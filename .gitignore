@@ -1,0 +1,4 @@
+# .gitignore
+.obsidian/
+.DS_Store
+*.tmp
