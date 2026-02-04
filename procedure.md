@@ -165,7 +165,7 @@ This project's content and design can be achieved by Week 9 of this quarter due 
 ### 8.1 Testing Plan
 
 - **SME Technical Review**: Bryan Desrosciers will review for technical accuracy and security best practices
-- **Sample Audience Testing**: 3-5 novice programmers will attempt to follow the procedure and provide feedback on clarity
+- **Sample Audience Testing**: 10 novice programmers will attempt to follow the procedure and provide feedback on clarity
 - **Peer Review**: EN421 classmates will review for organization and readability
 - **English Lab**: Grammar, style, and formatting review
 
