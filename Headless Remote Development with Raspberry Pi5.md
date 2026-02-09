@@ -36,7 +36,7 @@ To set your Raspberry Pi up headless, you don’t need any additional peripheral
 
 If you want to use your Raspberry Pi directly, you’ll need the following additional accessories:
 
-    a. display
+    a. display 
 
     b. cable to connect your Raspberry Pi to your display
 
@@ -48,7 +48,9 @@ If you want to use your Raspberry Pi directly, you’ll need the following addit
 
     a. 
 
-# 2
+# 2. Hardware Assembly and Component Breakdown
+
+Connect everything together Identify important components on the PI
 
 # 3. Installing Operating System Raspberry OS Lite
 
@@ -68,11 +70,15 @@ We recommend installing an operating system using Raspberry Pi Imager.
 
 If you have no other computer to write an image to a boot device, you may be able to install an operating system directly on your Raspberry Pi from the internet.
 
-# 4
+# 4 Initial system configuration
 
-# 5
+Setting up date/time, installing packages and dependencies
 
-# 6
+# 5 Network configuration
+
+Connect pi
+
+# 6 SSH setup and security
 
 # 7.  Pi VSCode Download/ Extension
 
@@ -110,3 +116,10 @@ If you have no other computer to write an image to a boot device, you may be abl
 
 ###
 
+# 8. Testing and Verifying connection
+
+test SSH connection from VScode on a different computer
+
+# 9. Additional steps and resources
+
+Links to setting up Python and C/C++ for GPIO programming
