@@ -1,23 +1,3 @@
-# MEMORANDUM
-
-TO: Holly Rose, Professor
-FROM: Jacob Platt
-DATE: 01/29/2026
-SUBJECT: Technical Communication Audience Analysis
-
-For the technical communications project my proposal of a markdown document will provide a step by step procedure for beginner programmers interested in remote headless development on the Raspberry Pi5. The markdown document is portable, allowing for it to be shared both online and offline across devices. Text will be the primary means of instructing the reader through the procedure using warnings, cautions, and notes throughout the setup. Code snippets will be clearly formatted and visuals will be used to assist in hardware configuration. The document is intended to be read sequentially with the steps of the procedure.
-
-10 respondents to the survey answered 8 questions in order to gauge their interest and ability to the engineer internet of things devices.
-
-In order to understand my target audience I created a survey on Survey Monkey in order to reach online participants interested in beginning Raspberry Pi development. Questions included indicating experience with engineering Internet of Things (IoT) systems, familiarity with network communication protocols, hardware integration, Linux administration, and secure software development practices. Answers are recorded 1-5, with 1 indicating a novice understanding level, with little to no practical experience. 2 indicated a beginner level of knowledge, requiring constant supervision to complete the task. 3 indicates an intermediate level of knowledge, with the ability to complete standard tasks independently. 4 indicates an advanced understanding, with the ability to troubleshoot and guide others. Lastly, 5 indicates an expert level of comprehension with the ability to architect solutions.
-
-Out of the ten correspondents, the strongest areas of comprehension were under the hardware and network protocol questions, 100% of correspondents felt they had an intermediate (3) or greater understanding of those areas. On the contrary, 25% felt they have a basic understanding and need constant supervision on topics such as Linux administration, secure access controls, and software engineering.
-
-The trends shown from the survey indicate that sections requiring Linux administration and secure access controls call for the most explanation. When creating my procedure extra attention will be brought to these areas with warnings, cautions, and notes before the steps mentioned. Visuals will be used to explain network communication along with links to additional resources.
-
-I look forward to your feedback and approval on my procedure on remote headless development on the Raspberry Pi.
-
----
 
 # Project Outline
 
