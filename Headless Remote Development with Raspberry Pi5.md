@@ -5,11 +5,10 @@ By: Jacob Platt
 2. Hardware assembly and component identification
 3. Operating system installation (Raspberry Pi OS Lite)
 4. Initial system configuration
-5. Network configuration
-6. SSH setup and security
-7. VS Code remote development setup
-8. Testing and verification
-9. Next steps and resources
+5. SSH setup and security
+6. VS Code remote development setup
+7. Testing and verification
+8. Next steps and resources
 ---
 
 # Introduction
@@ -195,4 +194,8 @@ This will display your Pi's IP address (e.g., `192.168.1.100`). **Write this dow
 
     ![Connected to Raspberry Pi!](images/confirmConnected.png)
 
-# 7. 
+# 7. Testing and Verification
+
+### Real time changes!
+
+ ![Connected to Raspberry Pi!](images/realTimeFolder.png)
