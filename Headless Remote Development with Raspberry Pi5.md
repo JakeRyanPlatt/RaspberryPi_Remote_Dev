@@ -56,16 +56,38 @@ In this technical procedure.... (Explain why we use a monitor to set up the Pi a
 
 ---
 
-title: State Diagram
+Title: Network State Diagram
 ---
 
-stateDiagram-v2  
-  [*] --> Client PC
-  Client PC --> [*]
-  Client PC --> Remote Pi  
-  Remote Pi --> Client Pi
-  Client PC -->  Router
-  Router --> [*]
+```mermaid
+flowchart LR
+  DevPC[Development PC / Laptop]
+  Router[Home / Lab Router]
+  Pi[(Raspberry Pi 5)]
+
+  DevPC <-- SSH / VS Code Remote --> Pi 
+  DevPC --> Router
+  Pi --> Router 
+```
+
+```mermaid
+stateDiagram-v2
+  title Network State Diagram
+
+[*] --> Pi_Off
+
+Pi_Off --> Pi_Booting : Power On
+Pi_Booting --> Pi_Online : OS boot complete
+Pi_Online --> SSH_Enabled : Enable SSH
+SSH_Enabled --> SSH_Connected : ssh user@pi 
+SSH_Connected --> VSCode_Remote : Open VS Code Remote-SSH
+VSCode_Remote --> Dev_Active : Start coding remotely
+
+Dev_Active --> SSH_Connected : Close VS Code
+SSH_Connected --> Pi_Online : Exit SSH
+Pi_Online --> Pi_Off : Shutdown
+    
+```
 
 # 4. Configuring your system
 
