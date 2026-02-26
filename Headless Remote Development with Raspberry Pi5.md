@@ -63,37 +63,26 @@ Pi_Online --> Pi_Off : Shutdown
 
 #### Items Required
 
-<<<<<<< HEAD
 1. Power for 5V (Adapter for Wall outlet/ PowerStrip)
-=======
-1. Power for 5V (Adapter for Wall outlet/ powerstrip)
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
-2. Raspberry Pi Board
-3. Raspberry Pi Case
-4. Cat5 or better ethernet cable
-5. Power Cable USB-C
-6. Micro USB to HDMI cable
-7. MicroSD card
-8. MicroSD reader
-9. Keyboard
-10. Mouse
-11. Monitor
-<<<<<<< HEAD
-12. Case (optional)
-13. Small Phillips head screwdriver
-=======
-
-#### Tools Required
-
-1. Small screwdriver
-2.
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
+2. Power for 5V (Adapter for Wall outlet/ powerstrip)
+3. Raspberry Pi Board
+4. Raspberry Pi Case
+5. Cat5 or better ethernet cable
+6. Power Cable USB-C
+7. Micro USB to HDMI cable
+8. MicroSD card
+9. MicroSD reader
+10. Keyboard
+11. Mouse
+12. Monitor
+13. Case (optional)
+14. Small Phillips head screwdriver
 
 ### Item Description
 
 | Item | Specification / Notes | |---|---| | Raspberry Pi 5 Board | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ. | | Raspberry Pi Case | Any case compatible with the Raspberry Pi 5 form factor | | MicroSD Card | 16GB minimum, 32GB recommended. Class 10 / A1 or faster. | | MicroSD Card Reader | USB adapter for writing the OS image from your computer | | USB-C Power Supply | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. | | Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI | | Ethernet Cable | Cat5 or better; connects Pi to your router for initial setup | | USB Keyboard | Any standard USB keyboard | | USB Mouse | Optional but recommended for first-boot configuration wizard | | Monitor with HDMI Input | Required for initial setup only | | Development Computer | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code | ### Tools Required | Tool | Purpose | |---|---| | Small Phillips screwdriver | Securing case screws (if applicable) | | Clean, flat work surface | Prevents static discharge damage during assembly |
 
-<<<<<<< HEAD
+
 > **⚠️ WARNING:** The Raspberry Pi 5 requires a **5V/5A USB-C power supply**.
 > Using a phone charger or any supply rated below 5A will cause under-voltage
 > warnings and unpredictable behavior. Check your power supply's label before > connecting. --- Once you have confirmed all items are present, proceed to **Section 2: Hardware Assembly and Component Identification**.
@@ -315,19 +304,10 @@ sudo grep '^sudo:' /etc/group
 ---
 # 5. SSH Setup & Security
 
-=======
-**Note:**
-
-- Replace `<username>` with your desired username
-- You'll be prompted to enter your current password, then set a password for the new user
-- The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
-
-# 5. Network Configuration (SSH setup and security)
-
-## Configure SSH for Remote Access
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
-
 SSH (Secure Shell) allows you to access your Raspberry Pi remotely from another computer. This is useful for development with tools like VS Code's Remote SSH extension.
+
+
+> **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
 
 ## 5.1 Enable SSH
 
@@ -393,10 +373,8 @@ hostname -I
 
 > **📝 Note:** Once connected, you'll see your Raspberry Pi's command prompt, confirming you're controlling it remotely.
 
-<<<<<<< HEAD
-=======
+
 `Ex Enter:`<username>@<ip-address>` (e.g., `pi@192.168.1.100`)`
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
 
 1. Enter your password when prompted
 
@@ -417,31 +395,29 @@ hostname -I
     - Search for "Remote - SSH" and install the extension published by Microsoft.
     - A new remote icon (a network plug) will appear in your left sidebar.
 
-    ![Connected to Raspberry Pi!](images/sshExtension.png)
+![Connected to Raspberry Pi!](images/sshExtension.png)
 *Figure 7: VSCode Extension Remote - SSH*
 
-<<<<<<< HEAD
+
 ## 6.2 Connect to your Raspberry Pi
 1.  Click on the Remote Explorer icon in the sidebar.
 2. Hover over the **SSH** section and click the `+` icon to add a new host.
 3. Enter the SSH connection command using your Pi's credentials: `ssh <username>@<hostname_or_ip_address>` (e.g., `ssh pi@raspberrypi.local` or `ssh pi@192.168.1.100`).
 4. Press Enter and select a configuration file when prompted (usually the default user folder one). The host is now saved.
-=======
- 2. **Connect to Your Raspberry Pi**
+
+ 5. **Connect to Your Raspberry Pi**
     - Click on the Remote Explorer icon in the sidebar.
     - Hover over the **SSH** section and click the `+` icon to add a new host.
     - Enter the SSH connection command using your Pi's credentials: `ssh <username>@<hostname_or_ip_address>` (e.g., `ssh pi@raspberrypi.local` or `ssh pi@192.168.1.100`).
     - Press Enter and select a configuration file when prompted (usually the default user folder one). The host is now saved.
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
 
-    ![Connected to Raspberry Pi!](images/sshRaspberryPi.png)
+
+![Connected to Raspberry Pi!](images/sshRaspberryPi.png)
 *Figure 8: Terminal showing SSH connection to my Pi at `192.168.1.160`
 
-<<<<<<< HEAD
-5. Establish the Connection
-=======
- 3. **Establish the Connection**
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
+
+ 6. **Establish the Connection**
+
     - In the Remote Explorer, under the SSH menu, find your new host entry.
     - Click the "Connect to host in new window" icon (looks like a new window next to the host name).
     - A new VS Code window will open and attempt to connect.
@@ -451,18 +427,18 @@ hostname -I
     ![Connected to Raspberry Pi!](images/VScodeServer.png)
 *Figure 9: VSCode SSH extension remote host setup
 
-<<<<<<< HEAD
+
 
 6. **Start Coding Remotely**
-=======
- 4. **Start Coding Remotely**
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
+
+ 7. **Start Coding Remotely**
+
     - Once connected, the green bar in the bottom-left corner of the VS Code window will indicate the active SSH connection.
     - In the Explorer sidebar, click **Open Folder**. A file explorer for your Raspberry Pi's file system will appear.
     - Navigate to your desired project folder (e.g., `/home/pi/Documents`) and click **OK**.
     - You can now create, edit, and run files directly on the Raspberry Pi using the familiar VS Code interface and its integrated terminal. Any command run in the terminal executes on the Pi itself.
 
-    ![Connected to Raspberry Pi!](images/confirmConnected.png)
+![Connected to Raspberry Pi!](images/confirmConnected.png)
 *Figure 10: Completely connected VSCode SSH to Raspberry Pi 5
 
 ---
