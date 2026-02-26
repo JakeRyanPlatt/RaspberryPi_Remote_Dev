@@ -10,7 +10,7 @@ By: Jacob Platt
 4. Initial system configuration
 5. SSH setup and security
 6. VS Code remote development setup
-7. Testing and verification
+7. Troubleshooting
 8. Next steps and resources
 
 ---
@@ -80,7 +80,7 @@ Pi_Online --> Pi_Off : Shutdown
 
 ### Item Description
 
-| Item | Specification / Notes | |---|---| | Raspberry Pi 5 Board | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ. | | Raspberry Pi Case | Any case compatible with the Raspberry Pi 5 form factor | | MicroSD Card | 16GB minimum, 32GB recommended. Class 10 / A1 or faster. | | MicroSD Card Reader | USB adapter for writing the OS image from your computer | | USB-C Power Supply | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. | | Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI | | Ethernet Cable | Cat5 or better; connects Pi to your router for initial setup | | USB Keyboard | Any standard USB keyboard | | USB Mouse | Optional but recommended for first-boot configuration wizard | | Monitor with HDMI Input | Required for initial setup only | | Development Computer | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code | ### Tools Required | Tool | Purpose | |---|---| | Small Phillips screwdriver | Securing case screws (if applicable) | | Clean, flat work surface | Prevents static discharge damage during assembly |
+| Item | Specification / Notes | |---|---| | Raspberry Pi 5 Board | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ. | | Raspberry Pi Case | Any case compatible with the Raspberry Pi 5 form factor | | MicroSD Card | 16GB minimum, 32GB recommended. Class 10 / A1 or faster. | | MicroSD Card Reader | USB adapter for writing the OS image from your computer | | USB-C Power Supply | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. | | Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI | | Ethernet Cable | Cat5 or better; connects Pi to your router for initial setup | | USB Keyboard | Any standard USB keyboard | | USB Mouse | Optional but recommended for first-boot configuration wizard | | Monitor with HDMI Input | Required for initial setup only | | Development Computer | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code |
 
 
 > **⚠️ WARNING:** The Raspberry Pi 5 requires a **5V/5A USB-C power supply**.
@@ -92,11 +92,11 @@ Pi_Online --> Pi_Off : Shutdown
 
 Before powering on your Raspberry Pi, you must assemble the hardware correctly. This section walks through identifying each component and assembling them in the correct order. Rushing this step or connecting power before assembly is complete is the most common cause of hardware damage. 
 
-| Component | Description | |---|---|
-| Raspberry Pi 5 Board | 
-The main computer. Handle only by the edges — avoid touching the green circuit board or metal contacts. | | Raspberry Pi Case (Top + Bottom) | Protective enclosure. Typically two or three pieces that snap together. | | MicroSD Card | Stores the operating system. Fragile — avoid bending or touching the gold contacts. | | USB-C Power Cable | Powers the Pi. Must be rated for 5V/5A for the Raspberry Pi 5. | | Micro HDMI to HDMI Cable | Connects the Pi to a monitor. Note: this is *Micro* HDMI, not standard HDMI. | | Heatsinks (if included) | Small metal pads that stick to chips on the board to dissipate heat. | | Cooling Fan (if included) | Attaches to the case lid and connects to the board's fan header. | | Ethernet Cable | Connects the Pi to your router or network switch for a wired internet connection. | 
+| Component | Description | |---|---| | Raspberry Pi 5 Board | The main computer. Handle only by the edges — avoid touching the green circuit board or metal contacts. | | Raspberry Pi Case (Top + Bottom) | Protective enclosure. Typically two or three pieces that snap together. | | MicroSD Card | Stores the operating system. Fragile — avoid bending or touching the gold contacts. | | USB-C Power Cable | Powers the Pi. Must be rated for **5V/5A** for the Raspberry Pi 5. | | Micro HDMI to HDMI Cable | Connects the Pi to a monitor. Note: this is *Micro* HDMI, not standard HDMI. | | Heatsinks (if included) | Small metal pads that stick to chips on the board to dissipate heat. | | Cooling Fan (if included) | Attaches to the case lid and connects to the board's fan header. | | Ethernet Cable | Connects the Pi to your router or network switch for a wired internet connection. | 
 
-> **⚠️ WARNING:** Never connect power to your Raspberry Pi until all components > are fully assembled. Connecting power prematurely can permanently damage the > board and void your warranty.
+> **🖐️ Handling Note:** Always handle the Raspberry Pi 5 by its edges. Avoid touching the green PCB surface or any metal contacts — static discharge can permanently damage the board.
+
+> **⚠️ WARNING:** Never connect power to your Raspberry Pi until all components are fully assembled. Connecting power prematurely can permanently damage the board and void your warranty.
 
 ## 2.1 Component Identification 
 
@@ -132,7 +132,7 @@ An active cooling fan provides additional airflow and is recommended for sustain
 2. Lower the Raspberry Pi board into the bottom case half. The ports (USB, HDMI, Ethernet) should align with the cutouts on the side of the case. The board will sit flush when correctly seated — do not force it. 
 3. If your case includes a fan mounted to the lid, align the lid carefully so the fan sits directly above the processor heatsink. 
 4. Press the top and bottom case halves together until they snap securely. You should hear or feel a click on each corner. 
-5. If your case includes screws, use your small screwdriver to fasten them now. Do not overtighten — finger-tight plus a quarter turn is sufficient. --- 
+5. If your case includes screws, use your small screwdriver to fasten them now. Do not overtighten — finger-tight plus a quarter turn is sufficient.
 ## 2.5 Inserting the MicroSD Card 
 
 > **⚠️ WARNING:** Do not insert or remove the MicroSD card while the Raspberry Pi is powered on. This can corrupt the operating system and require a complete reinstallation. 
@@ -141,11 +141,9 @@ An active cooling fan provides additional airflow and is recommended for sustain
 2. Hold the MicroSD card with the gold contacts facing down and the angled corner oriented toward the board. 
 3. Slide the card into the MicroSD slot on the underside of the board until you feel it click into place.
 
->**📝 Note:** You will insert the MicroSD card *after* writing the operating > system to it in Section 3. If you have not yet installed the OS, proceed to > Section 3 first and return here when instructed.
+>**📝 Note:** You will insert the MicroSD card *after* writing the operating system to it in Section 3. If you have not yet installed the OS, proceed to Section 3 first and return here when instructed.
 
- 
- ## 2.6 Connecting Peripherals 
- 
+
  **Do not connect power until last.** 
  
   *Figure 3: Correctly connected peripherals prior to powering on* 
@@ -155,8 +153,9 @@ An active cooling fan provides additional airflow and is recommended for sustain
 4. USB Mouse, Insert into any USB port. 
 5. USB-C Power Cable **Connect last**. The Raspberry Pi will begin booting immediately when power is connected. There is no physical power button. 
 
->**📝 Note:** The Raspberry Pi 5 has two Micro HDMI ports. Use `HDMI0` > (the port nearest to the power connector) as your primary display output. > Using `HDMI1` during initial setup may result in no display output. Once all peripherals are connected and power is supplied, you should see a rainbow splash screen appear on your monitor within a few seconds, followed by the Raspberry Pi OS boot sequence. If no image appears on your monitor within 30 seconds, refer to the troubleshooting note below. 
-=======
+>**📝 Note:** The Raspberry Pi 5 has two Micro HDMI ports. Use `HDMI0`  (the port nearest to the power connector) as your primary display output.  Using `HDMI1` during initial setup may result in no display output. Once all peripherals are connected and power is supplied, you should see a rainbow splash screen appear on your monitor within a few seconds, followed by the Raspberry Pi OS boot sequence. If no image appears on your monitor within 30 seconds, refer to the troubleshooting note below. 
+
+
   ![Connected to Raspberry Pi!](images/partsBreakdown.jpeg)
 
 # 2. Hardware assembly and component identification
@@ -164,11 +163,11 @@ An active cooling fan provides additional airflow and is recommended for sustain
  ![Connected to Raspberry Pi!](images/troubleshootNetwork.jpeg)
 
  ![Connected to Raspberry Pi!](images/powerConnectMicroUSB.jpeg)
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
+
 
 # 3
 
-<<<<<<< HEAD
+
 ![[powerConnectMicroUSB.jpeg]]
 *Figure 2: Power connected Raspberry Pi post assembly
  
@@ -177,44 +176,6 @@ An active cooling fan provides additional airflow and is recommended for sustain
  
  ---
 # 3. Operating system installation (Raspberry Pi OS)
-=======
-## Network Diagram and State Diagram
-
----
-
-Title: Network State Diagram
----
-
-```mermaid
-flowchart LR
-  DevPC[Development PC / Laptop]
-  Router[Home / Lab Router]
-  Pi[(Raspberry Pi 5)]
-
-  DevPC <-- SSH / VS Code Remote --> Pi 
-  DevPC --> Router
-  Pi --> Router 
-```
-
-```mermaid
-stateDiagram-v2
-  title Network State Diagram
-
-[*] --> Pi_Off
-
-Pi_Off --> Pi_Booting : Power On
-Pi_Booting --> Pi_Online : OS boot complete
-Pi_Online --> SSH_Enabled : Enable SSH
-SSH_Enabled --> SSH_Connected : ssh user@pi 
-SSH_Connected --> VSCode_Remote : Open VS Code Remote-SSH
-VSCode_Remote --> Dev_Active : Start coding remotely
-
-Dev_Active --> SSH_Connected : Close VS Code
-SSH_Connected --> Pi_Online : Exit SSH
-Pi_Online --> Pi_Off : Shutdown
-    
-```
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
 
 #### Items Required
 - MicroSD Card
@@ -223,7 +184,7 @@ Pi_Online --> Pi_Off : Shutdown
 
 > **📝 Note:** If you have no other computer to write an image to a boot device, you may be able to install an operating system [directly on your Raspberry Pi from the internet](https://www.raspberrypi.com/documentation/computers/getting-started.html#install-over-the-network).
 
-<<<<<<< HEAD
+
 ## 3.1 Installing the OS onto the MicroSD
 
 1. Plug the microSD reader into a USB port on your computer
@@ -259,9 +220,8 @@ Pi_Online --> Pi_Off : Shutdown
 If your Raspberry Pi does not boot within 5 minutes, check the status LED. If it’s flashing, see the [LED warning flash codes for more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). If your Pi refuses to boot, refer to step __ for troubleshooting
 
 ## 4.2 Set Up a New User
-=======
+
  ![Connected to Raspberry Pi!](images/allCommands.jpeg)
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
 
 We need to separate "us" as the user and the administrator of the machine. While we do play the role, this is make more sense later on.
 
@@ -374,10 +334,6 @@ hostname -I
 > **📝 Note:** Once connected, you'll see your Raspberry Pi's command prompt, confirming you're controlling it remotely.
 
 
-`Ex Enter:`<username>@<ip-address>` (e.g., `pi@192.168.1.100`)`
-
-1. Enter your password when prompted
-
 ---
 # 6. 1  Pi VSCode Download/ Extension
 
@@ -429,8 +385,6 @@ hostname -I
 
 
 
-6. **Start Coding Remotely**
-
  7. **Start Coding Remotely**
 
     - Once connected, the green bar in the bottom-left corner of the VS Code window will indicate the active SSH connection.
@@ -442,7 +396,7 @@ hostname -I
 *Figure 10: Completely connected VSCode SSH to Raspberry Pi 5
 
 ---
-# 7. Testing and Verification
+# 7. Troubleshooting
 
 ### Real time changes
 
