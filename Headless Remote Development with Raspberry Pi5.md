@@ -78,9 +78,21 @@ Pi_Online --> Pi_Off : Shutdown
 13. Case (optional)
 14. Small Phillips head screwdriver
 
-### Item Description
+### Item Description 
 
-| Item | Specification / Notes | |---|---| | Raspberry Pi 5 Board | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ. | | Raspberry Pi Case | Any case compatible with the Raspberry Pi 5 form factor | | MicroSD Card | 16GB minimum, 32GB recommended. Class 10 / A1 or faster. | | MicroSD Card Reader | USB adapter for writing the OS image from your computer | | USB-C Power Supply | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. | | Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI | | Ethernet Cable | Cat5 or better; connects Pi to your router for initial setup | | USB Keyboard | Any standard USB keyboard | | USB Mouse | Optional but recommended for first-boot configuration wizard | | Monitor with HDMI Input | Required for initial setup only | | Development Computer | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code |
+| Item                     | Specification / Notes                                                                                                         |     |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | --- |
+| Raspberry Pi 5 Board     | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ.                |     |
+| Raspberry Pi Case        | Any case compatible with the Raspberry Pi 5 form factor                                                                       |     |
+| MicroSD Card             | 16GB minimum, 32GB recommended. Class 10 / A1 or faster.                                                                      |     |
+| MicroSD Card Reader      | USB adapter for writing the OS image from your computer                                                                       |     |
+| USB-C Power Supply       | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. |     |
+| Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI                                                                                         |     |
+| Ethernet Cable           | Cat5 or better; connects Pi to your router for initial setup                                                                  |     |
+| USB Keyboard             | Any standard USB keyboard                                                                                                     |     |
+| USB Mouse                | Optional but recommended for first-boot configuration wizard                                                                  |     |
+| Monitor with HDMI Input  | Required for initial setup only                                                                                               |     |
+| Development Computer     | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code                                        |     |
 
 
 > **⚠️ WARNING:** The Raspberry Pi 5 requires a **5V/5A USB-C power supply**.
@@ -92,7 +104,16 @@ Pi_Online --> Pi_Off : Shutdown
 
 Before powering on your Raspberry Pi, you must assemble the hardware correctly. This section walks through identifying each component and assembling them in the correct order. Rushing this step or connecting power before assembly is complete is the most common cause of hardware damage. 
 
-| Component | Description | |---|---| | Raspberry Pi 5 Board | The main computer. Handle only by the edges — avoid touching the green circuit board or metal contacts. | | Raspberry Pi Case (Top + Bottom) | Protective enclosure. Typically two or three pieces that snap together. | | MicroSD Card | Stores the operating system. Fragile — avoid bending or touching the gold contacts. | | USB-C Power Cable | Powers the Pi. Must be rated for **5V/5A** for the Raspberry Pi 5. | | Micro HDMI to HDMI Cable | Connects the Pi to a monitor. Note: this is *Micro* HDMI, not standard HDMI. | | Heatsinks (if included) | Small metal pads that stick to chips on the board to dissipate heat. | | Cooling Fan (if included) | Attaches to the case lid and connects to the board's fan header. | | Ethernet Cable | Connects the Pi to your router or network switch for a wired internet connection. | 
+| Component                        | Description                                                                                             |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| Raspberry Pi 5 Board             | The main computer. Handle only by the edges — avoid touching the green circuit board or metal contacts. |
+| Raspberry Pi Case (Top + Bottom) | Protective enclosure. Typically two or three pieces that snap together.                                 |
+| MicroSD Card                     | Stores the operating system. Fragile — avoid bending or touching the gold contacts.                     |
+| USB-C Power Cable                | Powers the Pi. Must be rated for **5V/5A** for the Raspberry Pi 5.                                      |
+| Micro HDMI to HDMI Cable         | Connects the Pi to a monitor. Note: this is *Micro* HDMI, not standard HDMI.                            |
+| Heatsinks (if included)          | Small metal pads that stick to chips on the board to dissipate heat.                                    |
+| Cooling Fan (if included)        | Attaches to the case lid and connects to the board's fan header.                                        |
+| Ethernet Cable                   | Connects the Pi to your router or network switch for a wired internet connection.                       |
 
 > **🖐️ Handling Note:** Always handle the Raspberry Pi 5 by its edges. Avoid touching the green PCB surface or any metal contacts — static discharge can permanently damage the board.
 
