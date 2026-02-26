@@ -177,16 +177,11 @@ An active cooling fan provides additional airflow and is recommended for sustain
 >**📝 Note:** The Raspberry Pi 5 has two Micro HDMI ports. Use `HDMI0`  (the port nearest to the power connector) as your primary display output.  Using `HDMI1` during initial setup may result in no display output. Once all peripherals are connected and power is supplied, you should see a rainbow splash screen appear on your monitor within a few seconds, followed by the Raspberry Pi OS boot sequence. If no image appears on your monitor within 30 seconds, refer to the troubleshooting note below. 
 
 
-  ![Connected to Raspberry Pi!](images/partsBreakdown.jpeg)
-
-# 2. Hardware assembly and component identification
-
- ![Connected to Raspberry Pi!](images/troubleshootNetwork.jpeg)
-
- ![Connected to Raspberry Pi!](images/powerConnectMicroUSB.jpeg)
+---
 
 
-# 3
+ 
+
 
 
 ![[powerConnectMicroUSB.jpeg]]
@@ -252,14 +247,12 @@ We need to separate "us" as the user and the administrator of the machine. While
 
 2. Create and configure the new user:
 
-<<<<<<< HEAD
+
 > **⚠️ WARNING:** The following commands use `sudo` (superuser do), which grants administrator privileges. This is necessary to create users and modify system permissions.
 
- 
-=======
-**WARNING:** The following commands use `sudo` (superuser do), which grants administrator privileges. This is necessary to create users and modify system permissions.
 
->>>>>>> f6926c77386b324d57e21330828d13d01f4f652b
+
+
 ```bash
 sudo adduser <username>
 sudo passwd <username>
@@ -274,7 +267,7 @@ groups <username>
 sudo grep '^sudo:' /etc/group
 ```
 
-<<<<<<< HEAD
+
 
 > **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
 
