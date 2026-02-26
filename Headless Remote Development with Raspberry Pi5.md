@@ -237,8 +237,6 @@ If your Raspberry Pi does not boot within 5 minutes, check the status LED. If it
 
 ## 4.2 Set Up a New User
 
- ![Connected to Raspberry Pi!](images/allCommands.jpeg)
-
 We need to separate "us" as the user and the administrator of the machine. While we do play the role, this is make more sense later on.
 
 1. Open the terminal:
@@ -247,11 +245,7 @@ We need to separate "us" as the user and the administrator of the machine. While
 
 2. Create and configure the new user:
 
-
 > **⚠️ WARNING:** The following commands use `sudo` (superuser do), which grants administrator privileges. This is necessary to create users and modify system permissions.
-
-
-
 
 ```bash
 sudo adduser <username>
@@ -266,7 +260,6 @@ groups <username>
 # or
 sudo grep '^sudo:' /etc/group
 ```
-
 
 
 > **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
