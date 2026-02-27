@@ -64,19 +64,18 @@ Pi_Online --> Pi_Off : Shutdown
 #### Items Required
 
 1. Power for 5V (Adapter for Wall outlet/ PowerStrip)
-2. Power for 5V (Adapter for Wall outlet/ powerstrip)
-3. Raspberry Pi Board
-4. Raspberry Pi Case
-5. Cat5 or better ethernet cable
-6. Power Cable USB-C
-7. Micro USB to HDMI cable
-8. MicroSD card
-9. MicroSD reader
-10. Keyboard
-11. Mouse
-12. Monitor
-13. Case (optional)
-14. Small Phillips head screwdriver
+2. Raspberry Pi Board
+3. Raspberry Pi Case
+4. Cat5 or better ethernet cable
+5. Power Cable USB-C
+6. Micro USB to HDMI cable
+7. MicroSD card
+8. MicroSD reader
+9. Keyboard
+10. Mouse
+11. Monitor
+12. Case (optional)
+13. Small Phillips head screwdriver
 
 ### Item Description 
 
@@ -164,10 +163,7 @@ An active cooling fan provides additional airflow and is recommended for sustain
 
 >**📝 Note:** You will insert the MicroSD card *after* writing the operating system to it in Section 3. If you have not yet installed the OS, proceed to Section 3 first and return here when instructed.
 
-
- **Do not connect power until last.** 
  
-  *Figure 3: Correctly connected peripherals prior to powering on* 
 1. **Ethernet Cable** — Insert one end into the Raspberry Pi's Ethernet port and the other into your router or network switch. A wired connection is strongly recommended over Wi-Fi for initial setup — it is more reliable and eliminates a potential source of connection problems. 
 2. **Micro HDMI to HDMI Cable** — Connect the Micro HDMI end to port labeled `HDMI0` on the Raspberry Pi (the port closest to the USB-C power port). Connect the other end to your monitor.
 3. USB Keyboard, Insert into any USB port. 
@@ -179,15 +175,15 @@ An active cooling fan provides additional airflow and is recommended for sustain
 
 ---
 
-
+ ![Connected to Power!](images/powerConnectMicroUSB.jpeg)
  
 
 
 
-![[powerConnectMicroUSB.jpeg]]
+
 *Figure 2: Power connected Raspberry Pi post assembly
  
- ![Connected to Raspberry Pi!](images/troubleshootNetwork.jpeg)
+ ![Connected to Router!](images/troubleshootNetwork.jpeg)
 *Figure 3: Network Router LAN ports for Raspberry Pi Ethernet Connection
  
  ---
@@ -216,9 +212,9 @@ An active cooling fan provides additional airflow and is recommended for sustain
 	- A username and password
 	- Wi-Fi credentials
 	- Remote connectivity
-	- Raspberry Pi Connect - explain what this is vs using SSH through VSCode extension
+	- Raspberry Pi Connect 
 	
-> **📝 Note:** This is Raspberry Pi's official remote access service. It creates a secure tunnel through RP's cloud infrastructure allowing full remote desktop access through the browser, with remote shell via `connect.raspberrypi.com` with a raspberry pi account. This connection is better for quick access from anywhere as it does not require great performance. SSH overall is better for low latency, fast file access on the same local network
+> **📝 Note:** *Raspberry Pi Connect* is Raspberry Pi's official remote access service. It creates a secure tunnel through RP's cloud infrastructure allowing full remote desktop access through the browser, with remote shell via `connect.raspberrypi.com` with a raspberry pi account. This connection is better for quick access from anywhere as it does not require great performance. SSH overall is better for low latency, fast file access on the same local network
 
 ## 3.3 Set device hostname
 
@@ -237,7 +233,7 @@ If your Raspberry Pi does not boot within 5 minutes, check the status LED. If it
 
 ## 4.2 Set Up a New User
 
-We need to separate "us" as the user and the administrator of the machine. While we do play the role, this is make more sense later on.
+It is bad practice to use default administrator accounts for routine tasks as it increases the risk of compromising your system. Instead create a user account and add them to the sudo group. 
 
 1. Open the terminal:
    - Click the terminal icon at the top (`>_`)
@@ -344,19 +340,11 @@ hostname -I
 ---
 # 6. 1  Pi VSCode Download/ Extension
 
- 1. **Install the "Remote - SSH" extension in VS Code** on your development machine
-
-### Macintosh
-
- Press `Ctrl + Shift + P` (or `Cmd + Shift + P` on Mac)
-  Type "Remote-SSH: Connect to Host" and select it
-
-### Windows
-
-     Open VS Code on your computer.
-    - Go to the Extensions view (`Ctrl+Shift+X or Cmd+Shift+X`).
-    - Search for "Remote - SSH" and install the extension published by Microsoft.
-    - A new remote icon (a network plug) will appear in your left sidebar.
+1. **Install the "Remote - SSH" extension in VS Code** on your development machine
+2. Open VS Code on your computer.
+3. Go to the Extensions view (`Ctrl+Shift+X or Cmd+Shift+X`).
+4. Search for "Remote - SSH" and install the extension published by Microsoft.
+5. A new remote icon (a network plug) will appear in your left sidebar.
 
 ![Connected to Raspberry Pi!](images/sshExtension.png)
 *Figure 7: VSCode Extension Remote - SSH*
@@ -402,20 +390,21 @@ hostname -I
 ![Connected to Raspberry Pi!](images/confirmConnected.png)
 *Figure 10: Completely connected VSCode SSH to Raspberry Pi 5
 
----
-# 7. Troubleshooting
-
-### Real time changes
-
- ![Connected to Raspberry Pi!](images/realTimeFolder.png)
+![Connected to Raspberry Pi!](images/realTimeFolder.png)
 *Figure 11: Access to Raspberry Pi's filesystem through remote headless development over the network*
 
 ---
+
+# 7.1  Troubleshooting
+
+
+---
+
 # 8.1 Next Steps & Additional Resources
 
 ---
-## 9.1 References
+# 9.1 References
 
-- Raspberry Pi Foundation. (2025). *Raspberry Pi 5 Documentation*. <https://www.raspberrypi.com/documentation/>
-- Microsoft. (2025). *Visual Studio Code Remote Development*. <https://code.visualstudio.com/docs/remote/>
-- OpenSSH. (2025). *SSH Protocol Documentation*. <https://www.openssh.com/>
+[1] Raspberry Pi Foundation, "_Raspberry Pi 5 Documentation_," 2025. [Online]. Available: https://www.raspberrypi.com/documentation/
+[2] Microsoft, "_Visual Studio Code Remote Development_," 2025. [Online]. Available: https://code.visualstudio.com/docs/remote/
+[3] OpenSSH, "_SSH Protocol Documentation_," 2025. [Online]. Available: https://www.openssh.com/
