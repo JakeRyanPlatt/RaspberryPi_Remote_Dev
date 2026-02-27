@@ -123,7 +123,7 @@ Before powering on your Raspberry Pi, you must assemble the hardware correctly. 
 Before assembling, lay all components on a clean, flat, static-free surface and confirm you have each item listed below. Refer to the image below to identify each part.
 
  ![Connected to Raspberry Pi!](images/labelPartsBreakdown.png)
-*Figure 1: All required components connected post assembly
+*Figure 1: All required components connected post assembly*
 
 > **📝 Note:** The Raspberry Pi 5 uses **Micro HDMI**, not the full-size HDMI port > found on most TVs and monitors. Using the wrong cable or forcing a connection > will damage the port. Verify your cable before connecting.
 
@@ -181,10 +181,10 @@ An active cooling fan provides additional airflow and is recommended for sustain
 
 
 
-*Figure 2: Power connected Raspberry Pi post assembly
+*Figure 2: Power connected Raspberry Pi post assembly*
  
  ![Connected to Router!](images/troubleshootNetwork.jpeg)
-*Figure 3: Network Router LAN ports for Raspberry Pi Ethernet Connection
+*Figure 3: Network Router LAN ports for Raspberry Pi Ethernet Connection*
  
  ---
 # 3. Operating system installation (Raspberry Pi OS)
@@ -249,7 +249,7 @@ sudo passwd <username>
 sudo usermod -aG sudo <username>
 ```
 
-1. Verify the user was added to the sudo group:
+3. Verify the user was added to the sudo group:
 
 ```bash
 groups <username>
@@ -261,7 +261,7 @@ sudo grep '^sudo:' /etc/group
 > **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
 
  ![Connected to Raspberry Pi!](images/allCommands.jpeg)
-*Figure 4: Raspberry Pi Terminal showing required commands
+*Figure 4: Raspberry Pi Terminal showing required commands*
 
 
 ---
@@ -376,7 +376,7 @@ hostname -I
     - Enter your Raspberry Pi's password when requested.
 
     ![Connected to Raspberry Pi!](images/VScodeServer.png)
-*Figure 9: VSCode SSH extension remote host setup
+*Figure 9: VSCode SSH extension remote host setup*
 
 
 
@@ -388,7 +388,7 @@ hostname -I
     - You can now create, edit, and run files directly on the Raspberry Pi using the familiar VS Code interface and its integrated terminal. Any command run in the terminal executes on the Pi itself.
 
 ![Connected to Raspberry Pi!](images/confirmConnected.png)
-*Figure 10: Completely connected VSCode SSH to Raspberry Pi 5
+*Figure 10: Completely connected VSCode SSH to Raspberry Pi 5*
 
 ![Connected to Raspberry Pi!](images/realTimeFolder.png)
 *Figure 11: Access to Raspberry Pi's filesystem through remote headless development over the network*
