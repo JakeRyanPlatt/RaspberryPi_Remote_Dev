@@ -42,7 +42,7 @@ flowchart LR
 
 ```mermaid
 stateDiagram-v2
-  title Network State Diagram
+   Network State Diagram
 
 [*] --> Pi_Off
 
@@ -58,6 +58,8 @@ SSH_Connected --> Pi_Online : Exit SSH
 Pi_Online --> Pi_Off : Shutdown
     
 ```
+
+*Diagram 1*: Network State Diagram
 
 ---
 
@@ -175,10 +177,6 @@ An active cooling fan provides additional airflow and is recommended for sustain
 ---
 
  ![Connected to Power!](images/powerConnectMicroUSB.jpeg)
- 
-
-
-
 
 *Figure 2: Power connected Raspberry Pi post assembly*
  
@@ -215,12 +213,12 @@ An active cooling fan provides additional airflow and is recommended for sustain
 	
 > **📝 Note:** *Raspberry Pi Connect* is Raspberry Pi's official remote access service. It creates a secure tunnel through RP's cloud infrastructure allowing full remote desktop access through the browser, with remote shell via `connect.raspberrypi.com` with a raspberry pi account. This connection is better for quick access from anywhere as it does not require great performance. SSH overall is better for low latency, fast file access on the same local network
 
-## 3.3 Set device hostname
+## 3.3 Set device Hostname
 
 1.  In the **Customization > Hostname** tab, enter a host name for your Raspberry Pi that includes only letters, numbers, and hyphens. Select **Next**.
 2. Your Raspberry Pi broadcasts this host name to the network using [mDNS](https://en.wikipedia.org/wiki/Multicast_DNS). When you connect your Raspberry Pi to your network, other devices on the network can communicate with your computer using `<hostname>.local` or `<hostname>.lan`.
 ---
-# 4.1 Configuring your system
+# 4. Configuring your system
 
 1. Unplug your Raspberry Pi’s power supply to ensure that the Raspberry Pi is powered down while you connect peripherals. 
 2. If you installed the operating system on a microSD card, you can plug it into your Raspberry Pi’s card slot now. 
@@ -230,7 +228,7 @@ An active cooling fan provides additional airflow and is recommended for sustain
 
 If your Raspberry Pi does not boot within 5 minutes, check the status LED. If it’s flashing, see the [LED warning flash codes for more information](https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes). If your Pi refuses to boot, refer to step 8 for troubleshooting
 
-## 4.2 Set Up a New User
+## 4.1 Set Up a New User
 
 It is bad practice to use default administrator accounts for routine tasks as it increases the risk of compromising your system. Instead create a user account and add them to the sudo group. 
 
@@ -257,7 +255,7 @@ sudo grep '^sudo:' /etc/group
 ```
 
 
-> **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) - you can press Enter to skip these fields
+> **📝 Note:**  Replace `<username>` with your desired username. You'll be prompted to enter your current password, then set a password for the new user. The `adduser` command may ask for additional information (full name, etc.) You can press Enter to skip these fields
 
  ![Connected to Raspberry Pi!](images/allCommands.jpeg)
 *Figure 4: Raspberry Pi Terminal showing required commands*
@@ -300,7 +298,7 @@ SSH (Secure Shell) allows you to access your Raspberry Pi remotely from another 
 *Figure 6: Confirmation that SSH server is enabled*
 
 
-### 5.2 Find Your Raspberry Pi's IP Address
+## 5.2 Find Your Raspberry Pi's IP Address
 
 You'll need this IP address to connect from your other computer:
 
@@ -337,7 +335,7 @@ hostname -I
 
 
 ---
-# 6.1  Pi VSCode Download/ Extension
+# 6.  Pi VSCode Download/ Extension
 
 1. **Install the "Remote - SSH" extension in VS Code** on your development machine
 2. Open VS Code on your computer.
@@ -349,34 +347,34 @@ hostname -I
 *Figure 7: VSCode Extension Remote - SSH*
 
 
-## 6.2 Connect to your Raspberry Pi
+## 6.1 Connect to your Raspberry Pi
+
 1. Click on the Remote Explorer icon in the sidebar.
 2. Hover over the **SSH** section and click the `+` icon to add a new host.
 3. Enter the SSH connection command using your Pi's credentials: `ssh <username>@<hostname_or_ip_address>` (e.g., `ssh pi@raspberrypi.local` or `ssh pi@192.168.1.100`).
 4. Press Enter and select a configuration file when prompted (usually the default user folder one). The host is now saved.
 
 ![Connected to Raspberry Pi!](images/sshRaspberryPi.png)
-*Figure 8: Terminal showing SSH connection to my Pi at `192.168.1.160`
+*Figure 8: Terminal showing SSH connection to my Pi at `192.168.1.160`*
 
+## 6.2 Establish the Connection
+ 
+ 1. In the Remote Explorer, under the SSH menu, find your new host entry.
+ 2. Click the "Connect to host in new window" icon (looks like a new window next to the host name).
+ 3. A new VS Code window will open and attempt to connect.
+ 4. If prompted to confirm the host's authenticity, type `yes` in the terminal. Enter your Raspberry Pi's password when requested.
 
- 5. **Establish the Connection**
-
-    - In the Remote Explorer, under the SSH menu, find your new host entry.
-    - Click the "Connect to host in new window" icon (looks like a new window next to the host name).
-    - A new VS Code window will open and attempt to connect.
-    - If prompted to confirm the host's authenticity, type `yes` in the terminal.
-    - Enter your Raspberry Pi's password when requested.
 
     ![Connected to Raspberry Pi!](images/VScodeServer.png)
 *Figure 9: VSCode SSH extension remote host setup*
 
 
- 6. **Start Coding Remotely**
-
-    - Once connected, the green bar in the bottom-left corner of the VS Code window will indicate the active SSH connection.
-    - In the Explorer sidebar, click **Open Folder**. A file explorer for your Raspberry Pi's file system will appear.
-    - Navigate to your desired project folder (e.g., `/home/pi/Documents`) and click **OK**.
-    - You can now create, edit, and run files directly on the Raspberry Pi using the familiar VS Code interface and its integrated terminal. Any command run in the terminal executes on the Pi itself (Microsoft, 2025).
+## 6.3 **Start Coding Remotely**
+ 
+ 1. Once connected, the green bar in the bottom-left corner of the VS Code window will indicate the active SSH connection.
+ 2. In the Explorer sidebar, click **Open Folder**. A file explorer for your Raspberry Pi's file system will appear.
+ 3. Navigate to your desired project folder (e.g., `/home/pi/Documents`) and click **OK**.
+ 4. You can now create, edit, and run files directly on the Raspberry Pi using the familiar VS Code interface and its integrated terminal. Any command run in the terminal executes on the Pi itself (Microsoft, 2025).
 
 ![Connected to Raspberry Pi!](images/confirmConnected.png)
 *Figure 10: Completely connected VSCode SSH to Raspberry Pi 5*
@@ -386,24 +384,77 @@ hostname -I
 
 ---
 
-# 7.1  Troubleshooting
+# 7.  Troubleshooting
 
+Throughout this procedure their may be several instances of malfunction. Every Pi is tested for an initial boot before they are sold, but this does not resolve variance in assembly. Through the troubleshooting methodology use the following sections to identify the problem, research solutions and establish a theory to test and correct malfunctions throughout this procedure.
+
+## 7.1 Troubleshoot Hardware Assembly & Components
+##### Raspberry Pi will not power on
+1. Verify that the MicroSD card is firmly seated in the Raspberry Pi
+2. Check that the power supply is connected correctly
+3. If video output will not display try using a different HDMI cable
+
+## 7.2 Troubleshoot Operation System Install
+##### MicroSD Card Reader
+1. Verify the card reader and SD card work on different machines, using different USB ports
+2. If the card is unable to be detected in the Imager software, the reader may be defective
+##### Unsuitable USB cable
+1. Long cables use thin copper wire and may not be suitable for the Rasberry Pi 5. Avoid cables over 6ft in length
+## 7.3 Troubleshoot System Configuration
+##### Verify Language and Keyboard Settings
+1. In the terminal run `sudo raspi-config` to view and edit the configuration menu
+2. View [Raspbian OS documentation](https://www.raspberrypi.com/documentation/computers/os.html) for further troubleshooting
+
+## 7.4 Troubleshoot SSH & Security
+
+##### Check SSH Service Status
+1. Connect to the Raspberry Pi directly with a monitor/keyboard or through a serial console cable
+2. Verify the SSH service is running using the command `sudo systemctl status ssh` or `sudo service ssh status`
+##### Verify SSH Configuration
+1. Review the SSH daemon configuration file in location `/etc/ssh/sshd_config`
+2. Ensure the `Port` line is set to the default expected port 22
+##### Resolve "Host Key Verification Failed" Error
+1. This occurs when you reinstall the OS or assign a new Pi the same IP address as a previous one
+2. Delete the old host key from your client machine in file path `~/.ssh/known_hosts`
+##### Check Credentials and Permissions
+1. Default username is `pi` with password `password` using SSH keys verify the clients private key matches the server's public key and that file permissions are correct. 
+##### Check Server Logs
+1. SSH server logs can be found at file location `/var/log/auth.log`, specifically logs for failed connections can be found at `/var/log/secure` 
+
+## 7.5 Troubleshoot VSCode Extension
+##### SSH Server not running
+1. Reinstall the extension and reset the connection
+2. View the extensions documentation
 
 ---
 
-# 8.1 Next Steps & Additional Resources
+# 8.  Next Steps & Additional Resources
 
 Following this technical procedure postures you for headless remote development on the Raspberry Pi 5. 
 
+## 8.1 GPIO from Python
 
+Using the [GPIO Zero](https://gpiozero.readthedocs.io/en/stable/) library we can now control GPIO devices with the Python programming language. 
 
+## 8.2 Pi Pico SDK with CMake
 
+This software development kit uses CMake to manage the build process in order to produce a bare-metal executable, or in other words a standalone binary that includes all the code to run directly on a micro-controller. 
+
+## 8.3 Block ads at home with Pi-hole
+
+[Pi-hole blocks ads](https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/) by acting as a DNS sinkhole, or in laymen terms the pi sits on your network and blocks requests from adverting domain names.
+
+## 8.4 Shutdown Procedures
+
+To avoid damage to the Micro-SD card that is running our operating system, proper shutdown is accomplished through the command `sudo shutdown -h now`. 
 
 ---
-# 9.1 References
+# 9. References
 
  Raspberry Pi Foundation. (2025). _Raspberry Pi 5 documentation_. [https://www.raspberrypi.com/documentation/](https://www.raspberrypi.com/documentation/)
 
  Microsoft. (2025). _Visual Studio Code remote development_. [https://code.visualstudio.com/docs/remote/](https://code.visualstudio.com/docs/remote/)
 
  OpenSSH. (2025). _SSH protocol documentation_. [https://www.openssh.com/](https://www.openssh.com/)
+ 
+ *Images not cited are my own, including screenshots and graphs*
