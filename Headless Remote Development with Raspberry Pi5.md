@@ -63,36 +63,22 @@ Pi_Online --> Pi_Off : Shutdown
 
 ---
 
-#### Items Required
+### `:screwdriver:` Item's Required / Description 
 
-1. Power for 5V (Adapter for Wall outlet/ PowerStrip)
-2. Raspberry Pi Board
-3. Raspberry Pi Case (optional)
-4. Cat5 or better ethernet cable
-5. Power Cable USB-C
-6. Micro USB to HDMI cable
-7. MicroSD card
-8. MicroSD reader
-9. Keyboard
-10. Mouse
-11. Monitor
-12. Small Phillips head screwdriver
-
-### Item Description 
-
-| Item                     | Specification / Notes                                                                                                         |     |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | --- |
-| Raspberry Pi 5 Board     | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ.                |     |
-| Raspberry Pi Case        | Any case compatible with the Raspberry Pi 5 form factor                                                                       |     |
-| MicroSD Card             | 16GB minimum, 32GB recommended. Class 10 / A1 or faster.                                                                      |     |
-| MicroSD Card Reader      | USB adapter for writing the OS image from your computer                                                                       |     |
-| USB-C Power Supply       | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. |     |
-| Micro HDMI to HDMI Cable | Note: *Micro* HDMI, not standard HDMI                                                                                         |     |
-| Ethernet Cable           | Cat5 or better; connects Pi to your router for initial setup                                                                  |     |
-| USB Keyboard             | Any standard USB keyboard                                                                                                     |     |
-| USB Mouse                | Optional but recommended for first-boot configuration wizard                                                                  |     |
-| Monitor with HDMI Input  | Required for initial setup only                                                                                               |     |
-| Development Computer     | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code                                        |     |
+| Item                            | Specification / Notes                                                                                                         |     |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --- |
+| Raspberry Pi 5 Board            | This procedure is written for the Pi 5. Steps are largely compatible with the Pi 4 but screenshots may differ.                |     |
+| Raspberry Pi Case               | Any case compatible with the Raspberry Pi 5 form factor                                                                       |     |
+| MicroSD Card                    | 16GB minimum, 32GB recommended. Class 10 / A1 or faster.                                                                      |     |
+| MicroSD Card Reader             | USB adapter for writing the OS image from your computer                                                                       |     |
+| USB-C Power Supply              | **5V/5A (25W) rated** — the Raspberry Pi 5 requires more power than previous models. Underpowered supplies cause instability. |     |
+| Micro HDMI to HDMI Cable        | Note: *Micro* HDMI, not standard HDMI                                                                                         |     |
+| Ethernet Cable                  | Cat5 or better; connects Pi to your router for initial setup                                                                  |     |
+| USB Keyboard                    | Any standard USB keyboard                                                                                                     |     |
+| USB Mouse                       | Optional but recommended for first-boot configuration wizard                                                                  |     |
+| Monitor with HDMI Input         | Required for initial setup only                                                                                               |     |
+| Development Computer            | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code                                        |     |
+| Small Phillips head screwdriver |                                                                                                                               |     |
 
 
 > **⚠️ WARNING:** The Raspberry Pi 5 requires a **5V/5A USB-C power supply**.
