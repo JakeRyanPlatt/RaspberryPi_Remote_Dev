@@ -78,7 +78,7 @@ Pi_Online --> Pi_Off : Shutdown
 | USB Mouse                       | Optional but recommended for first-boot configuration wizard                                                                  |     |
 | Monitor with HDMI Input         | Required for initial setup only                                                                                               |     |
 | Development Computer            | Windows, macOS, or Linux — used to write the OS image and connect remotely via VS Code                                        |     |
-| Small Phillips head screwdriver |                                                                                                                               |     |
+| Small Phillips head screwdriver | Used for assembly of case                                                                                                     |     |
 
 
 > **⚠️ WARNING:** The Raspberry Pi 5 requires a **5V/5A USB-C power supply**.
