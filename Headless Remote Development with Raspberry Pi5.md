@@ -63,7 +63,7 @@ Pi_Online --> Pi_Off : Shutdown
 
 ---
 
-### `:screwdriver:` Item's Required / Description 
+### `🪛` Item's Required / Description 
 
 | Item                            | Specification / Notes                                                                                                         |     |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --- |
